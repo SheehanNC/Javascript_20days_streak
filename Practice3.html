@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Javascript String Practice</h1>
+        <script>
+            var Name = "Sheehan Nag Chowdhury";
+            var Gender = "Male";
+            function EnterName(){
+                 document.getElementById("Trial").innerHTML = Name;
+            }
+            function EnterGender(){
+                document.getElementById("Demo").innerHTML = Gender;
+            }
+        </script>
+    </head>
+    <body>
+        <button type = "button" onclick = "EnterName()">Display Name</button>
+        <button type = "button" onclick = "EnterGender()">Display Gender</button>
+        <p id ="Trial">Name will be displayed here</p>
+        <p id ="Demo">Gender will be displayed here</p>
+    </body>
+</html>
