@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Javascript Variables</h1>
+        <p id = "demo"></p>
+        <button type = "button" onclick = "Apple()">Apple</button>
+        <button type = "button" onclick = "Mango()">Mango</button>
+        <button type = "button" onclick = "MangoApple()">Mango and Apple</button>
+    </head>
+    <body>
+        <script>
+            var mango = 30;
+            var apple = 25;
+            var both = mango + apple;
+            function Apple(){
+                document.getElementById("demo").innerHTML = "Cost of Apple is " + apple;
+            }
+            function Mango(){
+                document.getElementById("demo").innerHTML = "Cost of Mango is " + mango;
+            }
+            function MangoApple(){
+                document.getElementById("demo").innerHTML = "Total cost : " + both;
+            }
+        </script>
+    </body>
+</html>
