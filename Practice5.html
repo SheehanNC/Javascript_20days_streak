@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Swapping of 2 numbers</h1>
+<script>
+function SwapNum(){
+var x,y,temp;
+x=Number(document.getElementById("1st").value);
+y=Number(document.getElementById("2nd").value);
+temp=x;
+x=y;
+y=temp;
+document.getElementById("demo1").innerHTML = "First number after swap: " + x;
+document.getElementById("demo2").innerHTML = "Second number after swap: " + y;
+}
+        </script>
+    </head>
+    <body>
+        <p>Enter value of x: 
+  <input id="1st">
+            Enter value of y: 
+<input id="2nd">
+        </p>
+        <p id = "demo1"></p>
+        <p id = "demo2"></p>
+        <button type = "button" onclick = SwapNum()>Click to Swap the Numbers</button>
+    </body>
+</html>
