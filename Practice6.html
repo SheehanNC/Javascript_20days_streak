@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<script>
+var n, i, temp, cnt;
+function IsPrime()
+{
+  n = parseInt(document.getElementById("demo").value);
+  if(n)
+  {
+    cnt=0;
+    temp = document.getElementById("demo2");
+    temp.style.display = "block";
+    for(i=2; i<n; i++)
+    {
+      if(n%2==0)
+      {
+        cnt++;
+        break;
+      }
+    }
+    if(cnt==0)
+      document.getElementById("demo2").innerHTML = "It is a Prime number";
+    else
+      document.getElementById("demo2").innerHTML = "It is not a Prime number";
+  }
+}
+</script>
+</head>
+<body>
+
+<p>Enter Number: <input id="demo"><button onclick="IsPrime()">Check</button></p>
+
+<p id="demo2"></p>
+
+</body>
+</html>
