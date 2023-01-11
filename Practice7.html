@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Javascript for checking Armstrong number</h1>
+        <script>
+            var s;
+            var n;
+            function IsArmstrong(){
+            n = parseInt(document.getElementById("demo").value);
+            var m = n;
+                document.getElementById("demo2").innerHTML = + m;
+            s=0;
+            while(m>0)
+                {
+                  let r = m%10;
+                  s = s + (r*r*r);
+                  m = Math.floor(m/10);
+                }
+                document.getElementById("demo2").innerHTML = + s;
+            if(n == s)
+                {
+                    document.getElementById("demo2").innerHTML = "It is an Armstrong number";
+                }
+            else
+                {
+                    alert("The number you entered is not an Armstrong number. Please enter an Armstrong number");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <p>Enter Number: <input id="demo"></p>
+        <p id="demo2"></p>
+        <button onclick="IsArmstrong()">Check</button>
+    </body>
+</html>
