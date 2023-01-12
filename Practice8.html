@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1 style = "color : blue">Program to check whether the last digit of three
+numbers is same</h1>
+        <script>
+            var a,b,c;
+            var l,m,n;
+            function LastDigit()
+            {
+                a = parseInt(document.getElementById("demo1").value);
+                b = parseInt(document.getElementById("demo2").value);
+                c = parseInt(document.getElementById("demo3").value);
+                l=a%10;
+                m=b%10;
+                n=c%10;
+                if(l==m && l==n)
+                    {
+                        console.log(`${a}, ${b} and ${c} have the same last digits`);
+                    }
+                else
+                    {
+                        alert("Sorry, the numbers you entered do not have the same last digits. Try again!");
+                    }
+            }
+        </script>
+    </head>
+    <body>
+        <p>Enter 3 numbers: 
+            <input id = "demo1">
+        <input id = "demo2">
+        <input id = "demo3"></p>
+        <button type = "button" onclick="LastDigit()">Check</button>
+    </body>
+</html>
