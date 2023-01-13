@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+   <h2>Program to reverse a string in javascript </h2>
+   <div id="demo"></div>
+   <script>
+      let rev = document.getElementById("demo");
+      let string = "Hello";
+      let l = string.length; 
+      let revStr = '';
+      for (let i = 0; i < l; i++) {
+         revStr = string[i] + revStr;
+      }
+      rev.innerHTML = "Reversed string is : " + revStr;
+   </script>
+</body>
+</html>
