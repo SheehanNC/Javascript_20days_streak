@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Program for Validation Form</h1>
+        <script>
+            var name, age, reg_no, stream;
+                 
+            function Validation()
+            {
+                name = document.getElementById("demo1").value;
+                age = parseInt(document.getElementById("demo2").value);
+                 reg_no = document.getElementById("demo3").value;
+                 stream = document.getElementById("demo4").value;
+                 console.log(`${name},${reg_no}`);
+                
+                if(name == "")
+                    {
+                        alert("Please enter your name!");
+                    }
+                else if(age<18)
+                    {
+                        alert("Sorry, you have to be 18 years old and above to fill the form!");
+                    }
+                else if(reg_no == "")
+                    {
+                        alert("Please enter your registration number!");
+                    }
+                else if(stream != "CSE")
+                    {
+                        alert("Sorry, you have to be a member of CSE department to fill the form!");
+                    }
+                else
+                    {
+                         document.getElementById("demo").innerHTML = "Form Submitted";   
+                    }
+            }
+        </script>
+        <body>
+            <p>Enter your Name:  
+                <input id = "demo1"></p>
+            <p>Enter your Age: <input id = "demo2"> </p>
+            <p>Enter your Registration number: <input id = "demo3"> </p>
+            <p>Enter your Stream: <input id = "demo4"> </p>
+            <p id = "demo"></p>
+            <button type = "button" onclick = "Validation()">Submit</button>
+        </body>
+    </head>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
