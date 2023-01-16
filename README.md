@@ -1,1 +1,1 @@
-20 days of Javascript Practice
+20 days streak of Javascript Practice
