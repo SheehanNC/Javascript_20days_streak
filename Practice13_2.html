@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1> Program to check whether a given word is palindrome</h1>
+    
+<p id = "demo"> </p>
+    
+<script>
+//function to check if the string is a palindrome
+function IsPalindrome(s) {
+    let l, i = 0;
+    
+    //store the length of the given string in a variable
+    l = s.length;
+    let isSpace = s.includes(" ");
+    
+    if (isSpace == false)
+    {
+        for (i = 0; i < l/2; i++)
+        {    
+            if (s[i] !== s[l-1-i])
+            {
+                return 'The given word is not a palindrome';
+            } 
+        }
+        return 'The given word is a palindrome';
+    }
+    else
+    {
+        return 'Enter a valid word';
+    }
+}
+
+//store the input string in a variable
+let strInput = prompt("Enter a word: ");
+
+//call the function to check if the string is a palindrome
+const RetVal = IsPalindrome(strInput);
+
+document.getElementById("demo").innerHTML = RetVal;
+</script>
+               
+</body>
+</html>
