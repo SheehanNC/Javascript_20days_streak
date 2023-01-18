@@ -1,0 +1,27 @@
+<!Doctype html>
+<html>
+    <head>
+        <h1 style = "color : darkblue">Program to print all the factors of a number</h1>
+    </head>
+    <body>
+        <script>
+            var count;
+            function Fac()
+            {
+                const n = prompt("Enter number: ");
+                document.write("The factors of " + n+ " are ");
+                for(let i = 1; i<=n; i++)
+                {
+                    if(n%i==0){
+                        count++;
+                        document.write(i+", ");
+                        }   
+                    else if(count==0){
+                        alert("Please enter a valid number");
+                    }
+                }
+            }
+        </script>
+        <button type = "button" onclick = "Fac()">Show factors</button>
+    </body>
+</html>
