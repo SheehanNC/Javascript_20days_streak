@@ -1,0 +1,26 @@
+<!Doctype html>
+<html>
+    <head>
+        <h1 style = "color : darkblue">Program to sort words alphabeticallyr</h1>
+    </head>
+    <body>
+        <script>
+             function SortWords()
+            {
+                var string = prompt('Enter a sentence: ');
+
+                const words = string.split('');
+
+                words.sort();
+
+                document.write("The sorted words are " );
+
+                for (const element of words) {
+                    document.write ("" + element + "");
+                }
+            }
+            
+        </script>
+        <button type = "button" onclick = "SortWords()">Show sorted words</button>
+    </body>
+</html>
