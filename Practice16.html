@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Validation for creating an account</h1>
+        <script>
+            var name, password;
+            function Validation()
+            {
+                name = document.getElementById("demo1").value;
+                password = document.getElementById("demo2").value;
+                console.log(`${name},${password}`);
+            if(name == "")
+                    {
+                        alert("Name cannot be empty. Please enter your name.");
+                    }
+            else if(password == ""){
+                alert("Password cannot be empty. Please create a password.");
+            }
+            else
+                    {
+                         document.getElementById("demo").innerHTML = "Account created";   
+                    }
+            }
+        </script>
+        <body>
+             <p>Enter your Name:  
+                <input id = "demo1"></p>
+            <p>Enter your Password: <input id = "demo2"></p>
+             <button type = "button" onclick = "Validation()">Submit</button>
+            <p id = "demo"></p>
+        </body>
+    </head>
+</html>
