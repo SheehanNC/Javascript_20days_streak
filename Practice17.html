@@ -1,0 +1,20 @@
+<!DOCTYPE hmtl>
+<html>
+    <head>
+        <h1>Learning Arrays</h1>
+        <script>
+            function Arrayadd()
+            {
+                var Names = [" Rahul"," Rohan"," Ashish"," Naveen"];
+                var name = document.getElementById("Demo").value;
+                Names.unshift(name);
+                
+                document.write("Updated Array : ");
+                document.write(Names + "<br>");
+                document.write("Length of Updated Array is : " + Names.length);
+            }
+        </script>
+        <p>Enter the name you want to be added: <input id = "Demo"></p>
+        <button  type = "button" onclick = "Arrayadd()">Add name</button>
+    </head>
+</html>
