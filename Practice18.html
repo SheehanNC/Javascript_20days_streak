@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<hmtl>
+    <head>
+        <h1>Learning Arrays Part 2</h1>
+        <script>
+            function Arrayfunc()
+            {
+                var RegId = [1004, 1011, 1020, 1018, 1005];
+                var newRegId = document.getElementById("new").value;
+                var removeRegId = document.getElementById("remove").value;
+                var findRegId = document.getElementById("find").value;
+                RegId.unshift(newRegId);
+                if(removeRegId == 1){
+                    RegId.pop();
+                }
+                var result = RegId.find(function(element){
+                    return element > findRegId;
+                    });                                      
+                document.write("Updated Array : ");
+                document.write(RegId + "<br>");
+                document.write("Element found: " + result + "<br>");
+            }
+        </script>
+        <p>Add Registration number at the beginning: <input id = "new"></p>
+        <p>Remove Registration number at the end? Type 1 for yes and 0 for no: <input id = "remove"></p>
+        <p>Find element greater than: <input id = "find"></p>
+        <button  type = "button" onclick = "Arrayfunc()">Confirm Changes</button>
+    </head>
+</hmtl>
