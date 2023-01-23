@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <h1>Learning about Arrays part 3</h1>
+    </head>
+    <body>
+        <script>
+            var items = ["mouse", "keyboard", "earphones", "charger", "harddrive", "controller"];
+            function displayarr()
+            {
+                var result = items.values();
+                document.write("The items are: ");
+                for(let c of result)
+                    {
+                        document.write(c+"<br>");
+                    }
+            }
+            function selectitems()
+            {
+                var input = document.getElementById("demo").value;
+                var r1 = items.lastIndexOf(input);
+                document.write(r1);
+            }
+            function moreitems()
+            {
+                var items2 = ["speaker", "bluetooth", "pen drive"]
+                var total = items.concat(items2);
+                document.write("Total list of items: ");
+                for(let x of total)
+                    {
+                        document.write(x+"<br>");
+                    }
+            }
+            function additems()
+            {
+                var n = document.getElementById("demo2").value;
+                for(let i = 1;i<=n;i++){
+                  var m = prompt()
+                  items.push(m);   
+                }
+                items = items.values();
+                for(let z of items)
+                    {
+                        document.write(z+"<br>");
+                    }
+            }
+        </script>
+        <p>Type the item name to find its index: <input id = "demo"></p>
+        <button type = "button" onclick = "selectitems()">Find Index</button>
+        <h2>Click on the option below to display all items</h2>
+        <button type = "button" onclick = "displayarr()">Show all items</button>
+        <h2>Click on the option below to show more items</h2>
+        <button type = "button" onclick = "moreitems()">Show more items</button>
+        <p>How many items do you want to add to the list? : <input id = "demo2"></p>
+        <button type = "button" onclick = "additems()">Add Items</button>
+    </body>
+</html>
