@@ -1,0 +1,62 @@
+<! DOCTYPE html5>
+<html>
+    <head>
+        <h1>Learning about Arrays part 4</h1>
+    </head>
+    <body>
+        <script>
+            var items = ["Rahul", "Somak", "Ayush", "Mainak", "Swarup", "Krishnan"];
+            
+            function ShowFriendList()
+            {
+                var name = items.values();
+                document.write("The names are: "+"<br>");
+                for(let n of name)
+                    {
+                       document.write(n+"<br>");
+                    }
+            }
+            
+            function Reverse()
+            {
+                items.reverse();
+                document.write("The names are: "+"<br>");
+                var name = items.values();
+                for(let n of name)
+                    {
+                       document.write(n+"<br>");
+                    }
+            }
+            function Details()
+            {
+                document.getElementById("itemno").disabled = false;
+                document.getElementById("noofitems").disabled = false;
+            }
+            function RemoveNames() 
+            {   
+                var opt = document.getElementById("remNames").value;
+                //myDiv.style.display = remNames.value == "Y" ? "block" : "none";
+               
+                if(opt == "Yes")
+                 {
+                    Details();
+                    var indx = document.getElementById("itemno").value;
+                    var noitems = document.getElementById("noofitems").value;
+                    items.splice((indx-1),noitems);
+                    document.getElementById("demo").innerHTML = items
+                 }
+            }
+        </script>
+        
+        <h2>Click on the option below to display list of all team members</h2>
+        <button type = "button" onclick = "ShowFriendList()">Show all items</button>
+        <p id="demo"></p>
+        
+        <button type = "button" onclick = "Reverse()">Reverse List</button>
+        <p>Do you want to remove names? Type Yes or No <input id = "remNames"></p>
+        <button type = "button" onclick = "Details()">Provide Details</button>
+        <p>Type the item no. onwards to remove (like 1,2 and so on) <input id = "itemno" disabled = true></p>
+        <p>Type the no. of names to remove <input id = "noofitems" disabled = true></p>
+        <button type = "button" onclick = "RemoveNames()">Remove Names</button>
+    </body>
+</html>
